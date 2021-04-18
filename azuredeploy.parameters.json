@@ -1,0 +1,47 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "name": {
+            "value": "myfirstswadeployment"
+        },
+        "location": {
+          "type": "string",
+          "defaultValue": "[resourceGroup().location]",
+          "metadata": {
+          "description": "Location for all resources."
+              }
+        },   
+        "sku": {
+            "value": "Free"
+        },
+        "skucode": {
+            "value": "Free"
+        },
+        "repositoryUrl": {
+            "value": "https://github.com/petender/myfirstswadeployment"
+        },
+        "branch": {
+            "value": "main"
+        },
+        "repositoryToken": {
+            "value": "" 
+        },
+        "appLocation": {
+            "value": "/"
+        },
+        "apiLocation": {
+            "value": ""
+        },
+        "appArtifactLocation": {
+            "value": "public"
+        },
+        "resourceTags": {
+            "value": {
+                "Environment": "Development",
+                "Project": "Testing SWA with ARM",
+                "ApplicationName": "myfirstswadeployment"
+            }
+        }
+    }
+}
